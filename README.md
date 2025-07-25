@@ -38,3 +38,25 @@ Binary prediction:
 0 = Normal
 1 = Anomaly
 
+**Plots & Interpretations**
+
+**Anomaly Score Plot**
+
+Shows reconstruction error over time:
+
+High spikes indicate unusual patterns
+
+A red dashed line is the anomaly threshold
+
+Helps visualize anomaly severity
+
+**Binary Prediction Timeline**
+
+Shows whether each time window is flagged as an anomaly:
+
+1 = Detected Anomaly
+
+0 = Normal
+
+Great for understanding detection coverage
+
