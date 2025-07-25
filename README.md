@@ -38,7 +38,7 @@ Binary prediction:
 0 = Normal
 1 = Anomaly
 
-**Plots & Interpretations**
+### Plots & Interpretations
 
 **Anomaly Score Plot**
 
