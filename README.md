@@ -12,19 +12,19 @@ It uses:
 
 ##  How It Works
 
-**Step 1: **Data Loading and Parsing
+**Step 1:** Data Loading and Parsing
 
 Time series data is simulated per telemetry channel .
 
 Anomalies from **labels_cleaned.csv** are injected into the signal for realism.
 
-**Step 2: **Preprocessing
+**Step 2:** Preprocessing
 
 Sliding window sequences are created for training.
 
 Normal sequences are used for training.
 
-**Step 3: **LSTM Autoencoder
+**Step 3:** LSTM Autoencoder
 
 The model learns to reconstruct normal sequences.
 
