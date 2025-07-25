@@ -12,27 +12,27 @@ It uses:
 
 ##  How It Works
 
-🔧 Step 1: Data Loading and Parsing
-Time series data is simulated per telemetry channel (sine wave + noise).
+Step 1: Data Loading and Parsing
 
-Anomalies from labels_cleaned.csv are injected into the signal for realism.
+Time series data is simulated per telemetry channel .
 
-🧼 Step 2: Preprocessing
-Data is scaled using MinMaxScaler.
+Anomalies from **labels_cleaned.csv** are injected into the signal for realism.
 
-Sliding window sequences are created for training (e.g., 30-timestep windows).
+Step 2: Preprocessing
 
-Only "normal" sequences (outside labeled anomaly windows) are used for training.
+Sliding window sequences are created for training.
 
-🧠 Step 3: LSTM Autoencoder
+Normal sequences are used for training.
+
+Step 3: LSTM Autoencoder
+
 The model learns to reconstruct normal sequences.
 
 On unseen data, it reconstructs normal well and fails on anomalies.
 
-Reconstruction error (MSE) is used as the Anomaly Score.
+Step 4: Anomaly Detection
 
-🔍 Step 4: Anomaly Detection
-A dynamic threshold (95th percentile) is applied to flag anomalies.
+A dynamic threshold is applied to flag anomalies.
 
 Binary prediction:
 0 = Normal
